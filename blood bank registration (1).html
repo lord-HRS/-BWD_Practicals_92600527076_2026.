@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Donation</title>
+    <style>
+        /* Base Reset & Typography */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Replaced local image with a high-quality web image and a dark overlay for contrast */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1615461066841-6116e61058f4?q=80&w=2000&auto=format&fit=crop') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Form Container */
+        .form-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            width: 100%;
+            max-width: 650px;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-header h2 {
+            color: #d32f2f;
+            font-size: 28px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .form-header p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* Layout Grid */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        /* Inputs & Labels */
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #444;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #d32f2f;
+            box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+        }
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        /* Radio Buttons */
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding-top: 10px;
+        }
+        .radio-group label {
+            margin-bottom: 0;
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+        input[type="radio"] {
+            accent-color: #d32f2f;
+        }
+
+        /* Buttons */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        button {
+            flex: 1;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+        button:active {
+            transform: scale(0.98);
+        }
+        .btn-submit {
+            background-color: #d32f2f;
+            color: white;
+        }
+        .btn-submit:hover {
+            background-color: #b71c1c;
+        }
+        .btn-reset {
+            background-color: #f5f5f5;
+            color: #555;
+            border: 1px solid #ddd;
+        }
+        .btn-reset:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Blood Donation Form</h2>
+            <p>Your contribution can save lives. Please provide your details below.</p>
+        </div>
+
+        <form action="action_page.php" method="POST">
+            
+            <!-- Name Row -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fname">First Name *</label>
+                    <input type="text" id="fname" name="fname" placeholder="e.g. Ravi" required>
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name *</label>
+                    <input type="text" id="lname" name="lname" placeholder="e.g. Kishan" required>
+                </div>
+            </div>
+
+            <!-- Demographics Row -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="bdate">Birth Date *</label>
+                    <input type="date" id="bdate" name="bdate" required>
+                </div>
+                <div class="form-group">
+                    <label>Title *</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="title" value="Mr" required> Mr.</label>
+                        <label><input type="radio" name="title" value="Ms"> Ms.</label>
+                        <label><input type="radio" name="title" value="Other"> Other</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Info Row -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="lordhrs@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(+91) 1453987264" required>
+                </div>
+            </div>
+
+            <!-- Medical / Blood Info Row -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="blood_group">Blood Group *</label>
+                    <select id="blood_group" name="blood_group" required>
+                        <option value="" disabled selected>Select your type</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Weight (kg) *</label>
+                    <input type="number" id="weight" name="weight" placeholder="e.g. 65" min="45" required>
+                </div>
+            </div>
+
+            <!-- Address -->
+            <div class="form-group">
+                <label for="address">Full Address *</label>
+                <textarea id="address" name="address" placeholder="Enter your residential address..." required></textarea>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="button-group">
+                <button type="reset" class="btn-reset">Clear Form</button>
+                <button type="submit" class="btn-submit">Submit Registration</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
