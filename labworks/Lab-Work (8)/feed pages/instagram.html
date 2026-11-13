@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta</title>
+    <style>
+
+
+        body {
+            background-color: rgb(2, 48, 71);
+            color: rgb(255, 183, 3);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .f {
+            width: 100%;
+            max-width: 470px;
+            
+        }
+
+
+        .box {
+            background-color:black ;
+            color: white;
+            padding: 10px 15px;
+            margin: 10px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .box input {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            width: 100%;
+            outline: none;
+        }
+
+        .p {
+            display: grid;
+            grid-template-columns: repeat(3, 13fr);
+            gap: 2px;
+        }
+
+    .g {
+            position: relative;
+            background-color: rgb(142, 202, 230);
+        }
+
+ .g img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: block;
+        }
+
+        .vc {
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            font-size: 12px;
+            font-weight: bold;
+            text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        .tx {
+            color: rgb(142, 202, 230);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="f">
+        <div class="box">
+            <input type="text" class="tx" placeholder="Search with Meta AI">
+        </div>
+
+        <div class="p">
+
+            <div class="g">
+                <img src="images/6.jpg" alt="Post">
+                <div class="vc">👁️ 1M</div>
+            </div>
+            <div class="g">
+                <img src="images/1.jpg" alt="Post">
+                <div class="vc">👁️ 370K</div>
+            </div>
+            <div class="g">
+                <img src="images/3.jpg" alt="Post">
+                <div class="vc">👁️ 1B</div>
+            </div>
+
+            <div class="g">
+                <img src="images/4.jpg" alt="Post">
+                <div class="vc">👁️ 1.8M</div>
+            </div>
+            <div class="g">
+                <img src="images/2.jpg" alt="Post">
+                <div class="vc">👁️ 1.6M</div>
+            </div>
+
+            <div class="g">
+                <img src="images/5.jpg" alt="Post">
+                <div class="vc">👁️ 8.1M</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

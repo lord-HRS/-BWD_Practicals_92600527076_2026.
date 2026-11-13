@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X (Twitter) Feed Clone</title>
+    <style>
+        
+        body {
+            background-color: #000000; /* X's signature true dark mode background */
+            color: #e7e9ea;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+       
+        .feed-container {
+            width: 100%;
+            max-width: 600px;
+            border-left: 1px solid #2f3336;
+            border-right: 1px solid #2f3336;
+            min-height: 100vh;
+        }
+
+        
+        .tweet {
+            display: flex;
+            padding: 12px 16px;
+            border-bottom: 1px solid #2f3336; 
+            cursor: pointer;
+        }
+
+        .tweet:hover {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+
+       
+        .profile-pic-container {
+            margin-right: 12px;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .tweet-content {
+            flex: 1;
+        }
+
+     
+        .tweet-header {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 15px;
+        }
+
+        .username {
+            font-weight: 700;
+            color: #e7e9ea;
+        }
+
+        .handle, .timestamp {
+            color: #71767b;
+            font-size: 14px;
+        }
+
+
+        .tweet-text {
+            font-size: 15px;
+            line-height: 1.5;
+            margin: 4px 0 12px 0;
+            color: #e7e9ea;
+        }
+
+
+        .tweet-image-container {
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #2f3336;
+            margin-bottom: 12px;
+        }
+
+        .tweet-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+
+   
+        .tweet-actions {
+            display: flex;
+            justify-content: space-between;
+            max-width: 425px;
+            color: #71767b;
+            font-size: 13px;
+        }
+
+        .action-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+  
+        .action-item.reply:hover { color: #1d9bf0; }
+        .action-item.repost:hover { color: #00ba7c; }
+        .action-item.like:hover { color: #f91880; }
+        .action-item.share:hover { color: #1d9bf0; }
+    </style>
+</head>
+<body>
+
+    <div class="feed-container">
+        
+       
+        <div class="tweet">
+            <div class="profile-pic-container">
+                <img src="images/pfp.png" class="profile-pic" alt="Profile">
+            </div>
+            <div class="tweet-content">
+                <div class="tweet-header">
+                    <span class="username">Itachi</span>
+                    <span class="handle">@itachi</span>
+                    <span class="timestamp">· 2h</span>
+                </div>
+                <div class="tweet-text">
+                    Paddling from HTML to CSS, Now its Time to use Java script and Fly away lets Go!!.  
+                </div>
+                <div class="tweet-image-container">
+                    <img src="images/3.jpg" class="tweet-image" alt="Post media">
+                </div>
+                <div class="tweet-actions">
+                    <div class="action-item reply">💬 42</div>
+                    <div class="action-item repost">🔁 128</div>
+                    <div class="action-item like">❤️ 1.2K</div>
+                    <div class="action-item share">📊 45K</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

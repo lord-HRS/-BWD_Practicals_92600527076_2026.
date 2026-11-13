@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Feed Clone</title>
+    <style>
+    
+        body {
+            background-color:rgb(199, 197, 211); 
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        
+        .feed-container {
+            width: 100%;
+            max-width: 500px;
+            padding-top: 15px;
+        }
+
+        
+        .post-card {
+            background-color: rgb(255, 209, 102);
+            border-radius: 8px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+       
+        .post-header {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; 
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        .user-info .username {
+            font-weight: bold;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .user-info .post-time {
+            font-size: 12px;
+            color: rgb(16, 17, 26);
+            margin: 2px 0 0 0;
+        }
+
+        
+        .post-text {
+            padding: 0 15px 10px 15px;
+            font-size: 14px;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        
+        .post-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover; 
+            display: block;
+        }
+
+        .post-actions {
+            display: flex;
+            justify-content: space-around;
+            padding: 8px 0;
+            border-top: 1px solid white;
+            color: gray;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .action-btn {
+            cursor: pointer;
+            padding: 6px 20px;
+            border-radius: 4px;
+        }
+
+        .action-btn:hover {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="feed-container">
+        
+        <div class="post-card">
+            <div class="post-header">
+                <img src="images/pfp.png" class="profile-pic" alt="Profile">
+                <div class="user-info">
+                    <p class="username">Elon Musk</p>
+                    <p class="post-time">2 hrs ago · 🌍</p>
+                </div>
+            </div>
+            <p class="post-text">Checking out this amazing new tech setup! What do you guys think?</p>
+            <div class="post-image">
+                <img src="images/4.jpg" alt="Post Image">
+            </div>
+            <div class="post-actions">
+                <div class="action-btn">👍 Like</div>
+                <div class="action-btn">💬 Comment</div>
+                <div class="action-btn">↗️ Share</div>
+            </div>
+        </div>
+
+        <div class="post-card">
+            <div class="post-header">
+                <img src="images/pfp.png" class="profile-pic" alt="Profile">
+                <div class="user-info">
+                    <p class="username">Harshad</p>
+                    <p class="post-time">Yesterday at 4:15 PM · 🔒</p>
+                </div>
+            </div>
+            <p class="post-text">Exploring futuristic nature megacities built on towering cliffs.</p>
+            <div class="post-image">
+                <img src="images/1.jpg" alt="Post Image">
+            </div>
+            <div class="post-actions">
+                <div class="action-btn">👍 Like</div>
+                <div class="action-btn">💬 Comment</div>
+                <div class="action-btn">↗️ Share</div>
+            </div>
+        </div>
+
+    </div>
+    
+
+</body>
+</html>
