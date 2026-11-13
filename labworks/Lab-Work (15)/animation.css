@@ -1,0 +1,41 @@
+#box {
+    width: 200px;
+    height: 200px;
+  background-color: rgb(168, 32, 32);;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 250px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: rgb(248, 224, 164);
+    animation-name:spin;
+    animation-duration: 3s;
+   animation-timing-function: ease ease-in-out;
+   animation-iteration-count: infinite;
+   animation-direction:alternate;
+   animation-delay: 1s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+0%{
+    50%{
+        scale: 2;
+        transform:rotate(0);
+        border: radius 0;
+      
+
+    }
+
+
+}
+100%{
+
+    transform: rotate(360deg) ;
+    border-radius: 50%;
+    scale:2;
+    background-color:rgb(248, 224, 164);
+    color:rgb(108, 26, 26)
+}
+}
