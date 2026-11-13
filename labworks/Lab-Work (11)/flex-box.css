@@ -1,0 +1,80 @@
+.containere{
+    display:flex ;
+    border: 10px solid rgb(115, 199, 199);
+    height: 90vh;
+    align-items: baseline;
+    flex-wrap: wrap;
+    align-content: flex-start;
+   column-gap: 1em;
+    row-gap: 1em;
+    background-color: rgb(249, 240, 224);
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    font-size:  8em; 
+    text-align: center;
+    border-radius: 15px;
+   
+
+}
+ #box1{
+ background-color:rgb(255, 246, 222);
+ }
+ #box1:hover
+{
+    background-color:rgb(230, 80, 27); ;
+}
+
+ #box2{
+    background-color:rgb(139, 223, 221);
+    }
+    #box2:hover
+    {
+        background-color:rgb(195, 17, 12);
+    }
+
+    #box3{
+        background-color:rgb(255, 227, 148);
+        }
+        #box3:hover
+        {
+            background-color:rgb(116, 10, 3);
+        }
+
+        #box4{
+            background-color:rgb(244, 143, 104);
+        }
+        #box4:hover
+        {
+            background-color:rgb(116, 10, 3);
+        }
+
+        #box5{
+            background-color:rgb(204, 58, 99);
+        }
+        #box5:hover
+        {
+            background-color:rgb(0, 255, 222);
+        }
+
+        #box6{
+            background-color:rgb(116, 10, 3);
+        }
+        #box6:hover
+        {
+            background-color:rgb(67, 0, 255);
+        }
+
+        #box7{
+            background-color:rgb(195, 17, 12);
+        }
+        #box6:hover
+        {
+            background-color: rgb(0, 255, 222)
+        }
+
+        #box8{
+            background-color:rgb(230, 80, 27);
+        }
